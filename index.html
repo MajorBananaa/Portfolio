@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ajout d'une animation pour un effet de zoom au survol des images */
+        .project-card img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+
+<body class="bg-gray-50 text-gray-800">
+
     <!-- Header -->
-    <header class="bg-gray-900 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Mon Portfolio</h1>
+    <header class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-4xl font-extrabold">Mon Portfolio</h1>
             <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#about" class="hover:text-gray-300">À propos</a></li>
-                    <li><a href="#projects" class="hover:text-gray-300">Projets</a></li>
-                    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="#about" class="hover:text-gray-200 transition-colors duration-200">À propos</a></li>
+                    <li><a href="#projects" class="hover:text-gray-200 transition-colors duration-200">Projets</a></li>
+                    <li><a href="#contact" class="hover:text-gray-200 transition-colors duration-200">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,67 +33,86 @@
 
     <!-- Section "À propos" -->
     <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">À propos de moi</h2>
-            <p class="text-lg leading-relaxed">Je suis un développeur passionné par la création d'applications web modernes et intuitives. J'adore apprendre de nouvelles technologies et relever des défis techniques.</p>
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-5xl font-extrabold mb-6 text-gray-800">À propos de moi</h2>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Je suis un développeur passionné spécialisé dans la création d'expériences utilisateur exceptionnelles. 
+                J'adore apprendre de nouvelles technologies et intégrer des solutions créatives dans mes projets.
+            </p>
+            <div class="mt-10">
+                <a href="#projects" class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 px-8 rounded-full font-bold shadow-lg hover:shadow-xl transition-transform transform hover:scale-105">
+                    Découvrez mes projets
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Section "Projets" -->
     <section id="projects" class="py-20 bg-gray-100">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-12">Mes Projets</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-5xl font-extrabold mb-12 text-gray-800">Mes Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
                 <!-- Project Card 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden project-card transition-transform transform hover:scale-105">
                     <img src="https://via.placeholder.com/400x300" alt="Projet 1" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Projet 1</h3>
-                        <p class="text-gray-700 mb-4">Description rapide du projet 1, ce qu'il fait et les technologies utilisées.</p>
-                        <a href="#" class="text-blue-500 hover:underline">Voir plus</a>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Projet 1</h3>
+                        <p class="text-gray-600 mb-4">Une brève description du projet 1 avec des détails sur les fonctionnalités et technologies utilisées.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-bold">En savoir plus</a>
                     </div>
                 </div>
                 <!-- Project Card 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden project-card transition-transform transform hover:scale-105">
                     <img src="https://via.placeholder.com/400x300" alt="Projet 2" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Projet 2</h3>
-                        <p class="text-gray-700 mb-4">Description rapide du projet 2, ce qu'il fait et les technologies utilisées.</p>
-                        <a href="#" class="text-blue-500 hover:underline">Voir plus</a>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Projet 2</h3>
+                        <p class="text-gray-600 mb-4">Une brève description du projet 2 avec des détails sur les fonctionnalités et technologies utilisées.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-bold">En savoir plus</a>
                     </div>
                 </div>
-                <!-- Ajoute d'autres cartes de projet ici -->
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden project-card transition-transform transform hover:scale-105">
+                    <img src="https://via.placeholder.com/400x300" alt="Projet 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Projet 3</h3>
+                        <p class="text-gray-600 mb-4">Une brève description du projet 3 avec des détails sur les fonctionnalités et technologies utilisées.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-bold">En savoir plus</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section "Contact" -->
     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Contactez-moi</h2>
-            <form action="#" method="POST" class="w-full max-w-lg mx-auto">
-                <div class="mb-4">
-                    <label for="name" class="block text-left text-gray-700 mb-2">Nom</label>
-                    <input type="text" id="name" name="name" class="w-full p-3 border rounded-lg" required>
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-5xl font-extrabold mb-10 text-gray-800">Contactez-moi</h2>
+            <form action="#" method="POST" class="w-full max-w-2xl mx-auto space-y-6">
+                <div class="flex flex-col">
+                    <label for="name" class="text-left text-gray-700 font-semibold mb-2">Nom</label>
+                    <input type="text" id="name" name="name" class="p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400" required>
                 </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-left text-gray-700 mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="w-full p-3 border rounded-lg" required>
+                <div class="flex flex-col">
+                    <label for="email" class="text-left text-gray-700 font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400" required>
                 </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-left text-gray-700 mb-2">Message</label>
-                    <textarea id="message" name="message" rows="4" class="w-full p-3 border rounded-lg" required></textarea>
+                <div class="flex flex-col">
+                    <label for="message" class="text-left text-gray-700 font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="6" class="p-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
                 </div>
-                <button type="submit" class="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600">Envoyer</button>
+                <button type="submit" class="bg-blue-500 text-white py-4 px-8 rounded-full shadow-lg font-bold hover:bg-blue-600 transition-transform transform hover:scale-105">Envoyer</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-4">
+    <footer class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-6">
         <div class="container mx-auto text-center">
-            <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+            <p class="text-sm">&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+            <p class="mt-2">Suivez-moi sur <a href="#" class="font-bold hover:underline">LinkedIn</a> ou <a href="#" class="font-bold hover:underline">GitHub</a></p>
         </div>
     </footer>
+
 </body>
+
 </html>
